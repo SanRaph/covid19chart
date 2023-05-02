@@ -5,6 +5,11 @@ import { formControl, NativeSelect } from '@material-ui/core';
 import Styles from './StatePicker.module.css';
 
 const StatePicker = () => {
+    const [fetchedState, setFetchStates] = useState([]);
+
+    useEffect(
+        
+    );
     return(
         <formControl>
              <NativeSelect>
