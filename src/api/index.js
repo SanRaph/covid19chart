@@ -23,3 +23,7 @@ export const fetchData = async () => {
     }
 
 };
+
+export const fetchDailyData = () => {
+
+};
