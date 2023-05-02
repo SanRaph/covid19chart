@@ -26,7 +26,8 @@ export const fetchData = async () => {
 
 export const fetchDailyData = async() => {
     try {
-        await axios.get(API_URL);
+        const {data} = await axios.get(`${API_URL/1/todos}`);
+        console.log(data);
     } catch (error) {
         console.log(error.message);
     }
