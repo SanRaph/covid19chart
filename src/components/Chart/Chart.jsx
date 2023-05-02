@@ -13,7 +13,7 @@ const Chart = () => {
         fetchAPI();
     });
 
-    const lineChart = (<Line data = { { labels:'', setDatasets:[{},{}] } } />);
+    const lineChart = ( dailyData[0] ? (<Line data = { { labels:'', setDatasets:[{},{}] } } />) : null );
 
     return(
         <hi>Chart</hi>
