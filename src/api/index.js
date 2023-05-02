@@ -19,15 +19,15 @@ export const fetchData = async () => {
         const response = await axios.get(API_URL)
         return response;
     } catch (error) {
-        console.log(error.message);
     }
 
 };
 
 export const fetchDailyData = async() => {
     try {
-        const {data} = await axios.get(`${API_URL/1/todos}`);
-        console.log(data);
+        const response = await axios.get(`${API_URL}/1/todos`);
+        console.log(response);
+        return response;
     } catch (error) {
         console.log(error.message);
     }
