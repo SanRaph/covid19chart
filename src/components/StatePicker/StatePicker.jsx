@@ -7,9 +7,7 @@ import Styles from './StatePicker.module.css';
 const StatePicker = () => {
     const [fetchedState, setFetchStates] = useState([]);
 
-    useEffect(
-        
-    );
+    
     return(
         <formControl>
              <NativeSelect>
