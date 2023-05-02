@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_URL = 'https://jsonplaceholder.typicode.com/users'
+const COMMENTS_URL = 'https://jsonplaceholder.typicode.com/posts/1/comments';
 
 //options not used
 const options = {
@@ -33,4 +34,14 @@ export const fetchDailyData = async() => {
         console.log(error.message);
     }
 
+};
+
+
+export const countries = async () => {
+    try {
+       const response = await axios.get(COMMENTS_URL);
+       console.log(response);
+    } catch (error) {
+        console.log(error)
+    }
 };
