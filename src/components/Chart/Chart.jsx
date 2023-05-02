@@ -17,23 +17,11 @@ const Chart = () => {
         fetchAPI();
     }, []);
 
-const lineChart = ( dailyData.length ? (<Line 
-data = { { labels: dailyData.map( (id) => { return id } ), setDatasets:[{
-    data: dailyData.map( (title) => { return title } ),
-    label: 'Title',
-    borderColor: '#3333ff',
-    fill: true
-},{
-    data: dailyData.map( (id) => { return id } ),
-    label: 'ID',
-    borderColor: 'red',
-    backgroundColor: 'rgba(255, 0, 0, 2.5)',
-    fill: true
-    }  ] } } />) : null );
+
 
     return(
         <div className={Styles.container}>
-            {lineChart}
+            <h1>Chart </h1>
         </div>
     )
 }
