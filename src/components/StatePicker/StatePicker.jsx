@@ -6,25 +6,25 @@ import Styles from './StatePicker.module.css';
 
 import {fetchedStates} from '../../api';
 
-const StatePicker = () => {
-    const [fetchedStates, setFetchStates] = useState([]);
+const StatePicker = ({ handleStateChange }) => {
+    const [fetchedStatesValues, setFetchStatesValues] = useState([]);
 
     useEffect( () => {
         const fetchedAPI = async () => {
-            setFetchStates(await fetchedStates());
+            setFetchStatesValues(await fetchedStates());
         }
 
         fetchedAPI();
 
-    }, [setFetchStates] );
+    }, [setFetchStatesValues] );
 
-    console.log(fetchedStates);
+    console.log(fetchedStates.data);
     
     return(
         <formControl>
              <NativeSelect>
                 <option value='global'>Global</option>
-                {fetchedStates.map((state) => <option value='state'>{state}</option>)}
+                {fetchedStatesValues.map((state, index) => <option key={index} value='state'>{state}</option>)}
 
                 fetchedS
             </NativeSelect>
