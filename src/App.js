@@ -19,8 +19,8 @@ class App extends react.Component
         
     }
 
-    handleStateChanged = () => {
-        
+    handleStateChange = () => {
+
     };
 
 
@@ -30,7 +30,7 @@ class App extends react.Component
             <div className={ Styles.container }>
                 <Cards data={ data }/>
                 <Chart />
-                <StatePicker />
+                <StatePicker handleStateChange={this.handleStateChange }/>
             </div>
                 
         )
