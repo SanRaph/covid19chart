@@ -24,6 +24,7 @@ const StatePicker = () => {
         <formControl>
              <NativeSelect>
                 <option value='global'>Global</option>
+                {fetchedStates.map((state) => <option value='state'>{state}</option>)}
 
                 fetchedS
             </NativeSelect>
