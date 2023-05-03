@@ -9,7 +9,8 @@ import { fetchData } from './api';
 class App extends react.Component
 {
     state = {
-        data: {}
+        data: {},
+        state: ''
     };
 
     async componentDidMount(){
@@ -17,6 +18,11 @@ class App extends react.Component
         this.setState({ data: result });
         
     }
+
+    handleStateChanged = () => {
+        
+    };
+
 
     render(){
         const { data } = this.state;
