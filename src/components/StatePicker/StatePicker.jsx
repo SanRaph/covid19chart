@@ -7,21 +7,25 @@ import Styles from './StatePicker.module.css';
 import {fetchedStates} from '../../api';
 
 const StatePicker = () => {
-    const [fetchedState, setFetchStates] = useState([]);
+    const [fetchedStates, setFetchStates] = useState([]);
 
     useEffect( () => {
         const fetchedAPI = async () => {
-            setFetchStates(await fetchedStates);
+            setFetchStates(await fetchedStates());
         }
+
+        fetchedAPI();
 
     }, [setFetchStates] );
 
-    console.log(fetchedState);
+    console.log(fetchedStates);
     
     return(
         <formControl>
              <NativeSelect>
                 <option value='global'>Global</option>
+
+                fetchedS
             </NativeSelect>
         </formControl>
     )
