@@ -37,7 +37,7 @@ export const fetchDailyData = async() => {
 };
 
 
-export const fetctStates = async () => {
+export const fetchedStates = async () => {
     try {
        const {data: {comments}} = await axios.get(COMMENTS_URL);
        return comments.map((comment) => comment.title);
