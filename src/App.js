@@ -19,7 +19,7 @@ class App extends react.Component
         
     }
 
-    handleStateChange = () => {
+    handleStateChange = (state) => {
 
     };
 
