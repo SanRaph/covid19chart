@@ -22,7 +22,7 @@ const StatePicker = ({ handleStateChange }) => {
     
     return(
         <formControl>
-             <NativeSelect>
+             <NativeSelect default='' onChange={(e) => (e.target.value)}>
                 <option value='global'>Global</option>
                 {fetchedStatesValues.map((state, index) => <option key={index} value='state'>{state}</option>)}
 
